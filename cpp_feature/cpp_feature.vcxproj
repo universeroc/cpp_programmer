@@ -75,10 +75,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cpp_feature.cpp" />
+    <ClCompile Include="feature_string_example.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="feature_inheritance.h" />
     <ClInclude Include="feature_overload_function.h" />
+    <ClInclude Include="feature_string_example.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
