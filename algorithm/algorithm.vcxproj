@@ -77,6 +77,8 @@
     <ClCompile Include="algorithm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linked_node.h" />
+    <ClInclude Include="matrix_transform.h" />
     <ClInclude Include="quick_sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
