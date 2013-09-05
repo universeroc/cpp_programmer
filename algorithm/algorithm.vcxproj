@@ -80,6 +80,7 @@
     <ClInclude Include="linked_node.h" />
     <ClInclude Include="matrix_transform.h" />
     <ClInclude Include="quick_sort.h" />
+    <ClInclude Include="string_util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

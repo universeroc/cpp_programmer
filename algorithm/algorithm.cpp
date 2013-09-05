@@ -7,6 +7,7 @@
 //#define TEST_QUICK_SORT
 //#define TEST_MATRIX_TRANSFORM
 #define TEST_LINKED_NODE
+//#define TEST_STRING_UTIL
 
 #ifdef TEST_QUICK_SORT
 #include "quick_sort.h"
@@ -18,6 +19,10 @@
 
 #ifdef TEST_LINKED_NODE
 #include "linked_node.h"
+#endif
+
+#ifdef TEST_STRING_UTIL
+#include "string_util.h"
 #endif
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -145,8 +150,25 @@ int _tmain(int argc, _TCHAR* argv[])
 
   std::cout<<find_n_from_the_right(L, 2)->value<<std::endl;
 
+  pLinkNode root = new LinkNode;
+  root->value = -1;
+  root->next = NULL;
+  pLinkNode head = root;
+  for (int i = 0; i < 5; ++i) {
+    pLinkNode t = new LinkNode;
+    t->value = i;
+    t->next = NULL;
+    root->next = t;
+    root = t;
+  }
+  head = reverse(head);
+
 #endif
 
+#ifdef TEST_STRING_UTIL
+  std::cout << contains_char("!@#$%^& ))", " ") <<std::endl;
+  std::cout << contains_char("ab", "ba") <<std::endl;
+#endif
 	return 0;
 }
 

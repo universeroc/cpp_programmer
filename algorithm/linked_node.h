@@ -6,6 +6,21 @@ typedef struct LinkNode {
   LinkNode* next;
 } LinkNode, *pLinkNode;
 
+// reverse the list
+pLinkNode reverse(pLinkNode r, bool has_head = false) {
+  pLinkNode p = NULL;
+  pLinkNode c = !has_head ? r : r->next;
+  pLinkNode n = c->next;
+
+  while (c) {
+    c->next = p;
+    p = c;
+    c = n;
+    n = n ? n->next : n;
+  }
+  return p;
+}
+
 //
 // A && B are desc sorted, we want the result desc also
 //
